@@ -1,0 +1,16 @@
+/* Filtros do acervo */
+.catalog-filters, .filtros-acervo { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.catalog-type-tag { margin-left: 6px; }
+
+/* Lista de capítulos dentro da página de um único mangá */
+.manga-chapters { margin-top: 32px; }
+.chapters-help { color: var(--cor-texto-secundario, #94a3b8); margin: 8px 0 18px; line-height: 1.6; }
+.manga-chapter-list { display: grid; gap: 10px; }
+.manga-chapter-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 16px; border: 1px solid var(--cor-borda, rgba(148,163,184,.25)); border-radius: 12px; background: var(--bg-card, rgba(15,23,42,.45)); }
+.manga-chapter-info { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.manga-chapter-info strong { color: var(--cor-texto, inherit); }
+.manga-chapter-info span { color: var(--cor-texto-secundario, #94a3b8); }
+@media (max-width: 600px) {
+  .manga-chapter-item { align-items: stretch; flex-direction: column; }
+  .manga-chapter-item .button { width: 100%; text-align: center; }
+}

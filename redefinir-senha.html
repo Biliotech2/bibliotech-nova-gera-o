@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Defina uma nova senha para sua conta BiblioTech.">
+    <title>Nova senha | BiblioTech</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="recuperar-senha.css">
+    <link rel="stylesheet" href="redefinir-senha.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth-config.js"></script>
+    <script src="app.js" defer></script>
+    <script src="auth.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="inicio.html" aria-label="BiblioTech - Início">
+            <img src="img/logo_HD.png" alt="BiblioTech">
+            <span>BiblioTech</span>
+        </a>
+        <nav class="primary-nav" aria-label="Navegação principal">
+            <a href="inicio.html">Início</a>
+            <a href="livros.html">Acervo</a>
+            <a href="favoritos.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="suporte.html">Ajuda</a>
+        </nav>
+        <div class="header-actions"><a href="login.html">Entrar</a></div>
+    </header>
+
+    <main class="page-shell page recovery-page" aria-labelledby="reset-title">
+        <section class="recovery-card" aria-label="Criar nova senha">
+            <div class="recovery-icon" aria-hidden="true">🔐</div>
+            <div class="recovery-content">
+                <p class="eyebrow">SEGURANÇA DA CONTA</p>
+                <h1 id="reset-title">Crie uma nova senha</h1>
+                <p class="recovery-description">Escolha uma senha nova com pelo menos 8 caracteres para voltar a acessar sua biblioteca.</p>
+
+                <form class="recovery-form password-reset-form">
+                    <div class="recovery-field">
+                        <label for="new-password">Nova senha</label>
+                        <div class="recovery-input-wrapper">
+                            <input id="new-password" name="password" type="password" autocomplete="new-password" minlength="8" placeholder="Digite sua nova senha" required>
+                        </div>
+                    </div>
+                    <div class="recovery-field">
+                        <label for="confirm-new-password">Confirmar nova senha</label>
+                        <div class="recovery-input-wrapper">
+                            <input id="confirm-new-password" name="password_confirmation" type="password" autocomplete="new-password" minlength="8" placeholder="Digite novamente sua senha" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="button recovery-button">Salvar nova senha</button>
+                    <div class="recovery-info" role="status" aria-live="polite">
+                        <span class="recovery-info-icon" aria-hidden="true">ℹ</span>
+                        <p id="reset-feedback">Validando seu link de recuperação...</p>
+                    </div>
+                </form>
+                <div class="recovery-back"><a class="text-link" href="login.html">← Voltar para entrar</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 BiblioTech</span>
+        <span>Sua biblioteca, com segurança.</span>
+    </footer>
+</body>
+</html>

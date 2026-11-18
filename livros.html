@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acervo | BiblioTech</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="livros.css">
+    <link rel="stylesheet" href="acervo-mangas.css">
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="auth-config.js"></script>
+    <script src="auth.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" href="inicio.html"><img src="img/logo_HD.png" alt="BiblioTech"><span>BiblioTech</span></a>
+    <nav class="primary-nav" aria-label="Navegação principal">
+        <a href="inicio.html">Início</a>
+        <a class="active" href="livros.html" aria-current="page">Acervo</a>
+        <a href="favoritos.html">Favoritos</a>
+        <a href="perfil.html">Perfil</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="suporte.html">Ajuda</a>
+    </nav>
+    <div class="header-actions"><a href="login.html">Entrar</a><a class="button button-small" href="cadastro.html">Criar conta</a></div>
+</header>
+<main class="page-shell page catalog-page">
+    <section class="page-intro" aria-labelledby="catalog-title">
+        <p class="eyebrow">Nosso acervo</p>
+        <h1 id="catalog-title">Encontre sua próxima leitura</h1>
+        <p>Explore livros e mangás para aprender, imaginar e criar.</p>
+    </section>
+    <section class="catalog-controls" aria-label="Ferramentas de busca e filtro">
+        <label class="search"><span aria-hidden="true">⌕</span><input id="book-search" type="search" placeholder="Buscar por título ou autor" autocomplete="off" aria-label="Buscar título ou autor"></label>
+        <label class="catalog-filter"><span class="sr-only">Filtrar tipo de conteúdo</span><select id="content-type-filter" aria-label="Filtrar por tipo"><option value="">Todos os tipos</option><option value="livro">Livros</option><option value="manga">Mangás</option><option value="hq">HQ</option></select></label>
+        <label class="catalog-filter"><span class="sr-only">Filtrar por categoria</span><select id="genre-filter" aria-label="Filtrar por categoria"><option value="">Todas as categorias</option><option value="Clássico">Clássico</option><option value="Ciência">Ciência</option><option value="Fantasia">Fantasia</option><option value="História">História</option><option value="Romance">Romance</option><option value="Aventura">Aventura</option><option value="Educação">Educação</option><option value="Terror">Terror</option><option value="Drama">Drama</option><option value="Mitologia">Mitologia</option><option value="Ação">Ação</option><option value="Comédia">Comédia</option><option value="Ficção científica">Ficção Científica</option></select></label>
+    </section>
+    <section class="catalog-results" aria-labelledby="results-title">
+        <div class="catalog-results-header"><div><span class="section-label">Biblioteca</span><h2 id="results-title">Livros e mangás disponíveis</h2></div></div>
+        <div id="book-grid" class="book-grid" aria-live="polite"><!-- Cards inseridos pelo app.js --></div>
+    </section>
+</main>
+<footer class="site-footer"><span>© 2026 BiblioTech</span><span>Acervo digital para a escola.</span></footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+/* Leitor de PDF da BiblioTech — estilos isolados para não alterar outras páginas. */
+.pdf-reader-modal[hidden] { display: none !important; }
+.pdf-reader-modal {
+    position: fixed; inset: 0; z-index: 9999; display: flex;
+    align-items: center; justify-content: center; padding: 22px;
+}
+.pdf-reader-backdrop {
+    position: absolute; inset: 0; background: rgba(3, 10, 22, .82);
+    backdrop-filter: blur(4px);
+}
+.pdf-reader-dialog {
+    position: relative; z-index: 1; display: flex; flex-direction: column;
+    width: min(1200px, 100%); height: min(900px, 92vh); overflow: hidden;
+    background: #0b2341; border: 1px solid #294565; border-radius: 16px;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .45);
+}
+.pdf-reader-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 14px 18px; color: #f8fafc; background: #102b4b;
+    border-bottom: 1px solid #294565;
+}
+.pdf-reader-header h2 {
+    min-width: 0; margin: 0; overflow: hidden; font-size: 1rem;
+    font-weight: 700; text-overflow: ellipsis; white-space: nowrap;
+}
+.pdf-reader-controls { display: flex; align-items: center; gap: 10px; }
+.pdf-reader-fullscreen {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    min-height: 42px; padding: 8px 12px; border: 1px solid #45617f;
+    border-radius: 10px; background: #173858; color: #fff; font: inherit;
+    font-size: .9rem; cursor: pointer; white-space: nowrap;
+}
+.pdf-reader-fullscreen:hover { background: #254b70; }
+.pdf-reader-dialog:fullscreen {
+    width: 100%; height: 100%; max-height: 100%; border: 0; border-radius: 0;
+    background: #0b2341;
+}
+.pdf-reader-dialog.pdf-reader-forced-fullscreen {
+    position: fixed; inset: 0; z-index: 10000; width: 100vw; height: 100dvh;
+    max-height: none; border-radius: 0;
+}
+.pdf-reader-close {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 42px; height: 42px; flex: 0 0 auto; border: 1px solid #45617f;
+    border-radius: 10px; background: transparent; color: #fff; font-size: 1.1rem;
+    cursor: pointer;
+}
+.pdf-reader-close:hover { background: #203e60; }
+#pdf-reader-frame {
+    display: block; width: 100%; flex: 1 1 auto; min-height: 0;
+    border: 0; background: #e5e7eb;
+}
+body.pdf-reader-open { overflow: hidden; }
+@media (max-width: 600px) {
+    .pdf-reader-modal { padding: 0; }
+    .pdf-reader-dialog { width: 100%; height: 100%; max-height: 100dvh; border-radius: 0; }
+    .pdf-reader-header { align-items: flex-start; padding: 12px; }
+    .pdf-reader-header h2 { padding-top: 10px; font-size: .9rem; }
+    .pdf-reader-controls { gap: 6px; }
+    .pdf-reader-controls .button, .pdf-reader-fullscreen { min-height: 42px; padding: 8px 10px; font-size: .8rem; }
+}

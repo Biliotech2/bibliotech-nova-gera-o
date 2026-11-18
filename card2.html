@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Livro ou mangá | BiblioTech</title>
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="card2.css">
+    <link rel="stylesheet" href="leitor-pdf.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" href="inicio.html"><img src="img/logo_HD.png" alt="BiblioTech"><span>BiblioTech</span></a>
+    <nav class="primary-nav" aria-label="Navegação principal"><a href="inicio.html">Início</a><a class="active" href="livros.html">Acervo</a><a href="favoritos.html">Favoritos</a><a href="sobre.html">Sobre</a><a href="suporte.html">Ajuda</a></nav>
+    <div class="header-actions"><a href="login.html">Entrar</a><a class="button button-small" href="cadastro.html">Criar conta</a></div>
+</header>
+<main class="page-shell page book-page">
+    <a class="back-link" href="livros.html">← Voltar ao acervo</a>
+    <section id="book-detail" class="book-detail" aria-live="polite"><!-- Preenchido pelo app.js --></section>
+</main>
+<div id="pdf-reader-modal" class="pdf-reader-modal" hidden>
+    <div class="pdf-reader-backdrop" data-close-pdf-reader></div>
+    <section class="pdf-reader-dialog" role="dialog" aria-modal="true" aria-labelledby="pdf-reader-title">
+        <header class="pdf-reader-header"><h2 id="pdf-reader-title">Leitor</h2><div class="pdf-reader-controls"><button id="pdf-reader-fullscreen" class="pdf-reader-fullscreen" type="button" aria-pressed="false">⛶ Tela cheia</button><a id="pdf-reader-download" class="button button-secondary" href="#" download><span aria-hidden="true">⇩</span> Baixar arquivo</a><button id="pdf-reader-close" class="pdf-reader-close" type="button" aria-label="Fechar leitor">✕</button></div></header>
+        <iframe id="pdf-reader-frame" title="Conteúdo em PDF" src="about:blank" loading="lazy"></iframe>
+    </section>
+</div>
+<footer class="site-footer"><span>© 2026 BiblioTech</span><span>Leitura que conecta.</span></footer>
+</body>
+</html>

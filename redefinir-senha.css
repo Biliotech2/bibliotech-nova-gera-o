@@ -1,0 +1,23 @@
+/* Campos da página de redefinição: mantém o padrão visual da recuperação. */
+.password-reset-form .recovery-field { display: grid; gap: 8px; }
+.password-reset-form .recovery-field label { color: var(--ink); font-weight: 700; font-size: .9rem; }
+.password-reset-form .recovery-input-wrapper { display: block; }
+.password-reset-form .recovery-input-wrapper input {
+    width: 100%; min-height: 49px; padding: 12px 14px;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper); color: var(--ink); font: inherit;
+    box-sizing: border-box;
+}
+.password-reset-form .recovery-input-wrapper input:focus {
+    outline: none; border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(59,130,246,.13);
+}
+.password-reset-form button:disabled { opacity: .65; cursor: wait; }
+body:not(.dark) .password-reset-form .recovery-field label { color: #172033; }
+body:not(.dark) .password-reset-form .recovery-input-wrapper input {
+    background: #fff; border-color: #94a3b8; color: #172033;
+}
+body.dark .password-reset-form .recovery-field label { color: #edf5ff; }
+body.dark .password-reset-form .recovery-input-wrapper input {
+    background: #061426; border-color: #29486c; color: #edf5ff;
+}
