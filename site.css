@@ -138,10 +138,11 @@ body:not(.dark) .config-page .button-outline {
 }
 
 body:not(.dark) .config-page .button-outline:hover {
-    color: #0080ff;
+    color: #0000ff;
     background: #eff6ff;
     border-color: #2563eb;
 }
+
 
 
 /* =========================================================
