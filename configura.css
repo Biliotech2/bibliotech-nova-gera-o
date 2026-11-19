@@ -563,9 +563,9 @@
 
     background: transparent;
 
-    color: var(#f2f5f8;);
+    color: var(--accent);
 
-    border-color: #28527c;
+    border-color: #f2f5f8;
 }
 
 .config-page .button-outline:hover {
