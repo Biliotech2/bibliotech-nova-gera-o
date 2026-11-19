@@ -133,11 +133,12 @@ body:not(.dark) .config-page .reset-section {
 }
 
 body:not(.dark) .config-page .button-outline {
-    color: #2563eb;
+    color: #fdfeff;
     border-color: #bfdbfe;
 }
 
 body:not(.dark) .config-page .button-outline:hover {
+    color: #0080ff;
     background: #eff6ff;
     border-color: #2563eb;
 }
